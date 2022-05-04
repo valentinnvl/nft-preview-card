@@ -1,0 +1,154 @@
+:root {
+  --white: #FFF;
+  --soft-blue: #8BACDA;
+  --cyan: #00FFF7;
+  --bg-clr: #0D192B;
+  --card-clr: #14253D;
+  --card-shadow-clr: #0c1729;
+  --overlay-clr: #00FFF780;
+  --line-clr: #2F415B;
+}
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  height: 100vh;
+  background-color: var(--bg-clr);
+  font-family: Outfit, sans-serif;
+  font-weight: 400;
+  color: var(--soft-blue);
+}
+
+a {
+  text-decoration: none;
+  color: var(--white);
+}
+
+a:hover {
+  color: var(--cyan);
+}
+
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  max-width: 350px;
+  margin: 0 25px;
+  padding: 24px 24px 32px;
+  background-color: var(--card-clr);
+  border-radius: 15px;
+  box-shadow: 0 32px 0 16px var(--card-shadow-clr);
+}
+
+.preview {
+  position: relative;
+  cursor: pointer;
+}
+
+.nft {
+  display: block;
+  width: 100%;
+  border-radius: 8px;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background-color: var(--overlay-clr);
+  border-radius: 8px;
+  opacity: 0;
+}
+
+.overlay:hover {
+  opacity: 1;
+}
+
+.overlay-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.title {
+  margin-bottom: 16px;
+  font-size: 1.375rem;
+  font-weight: 600;
+}
+
+.description {
+  font-size: 1.125rem;
+  font-weight: 300;
+  line-height: 26px;
+}
+
+.infos {
+  display: flex;
+  justify-content: space-between;
+}
+
+.price {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.price-value {
+  font-weight: 600;
+  color: var(--cyan);
+}
+
+.time-left {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.line {
+  height: 1px;
+  width: 100%;
+  background-color: var(--line-clr);
+}
+
+.author {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-top: 16px;
+}
+
+.author-avatar {
+  width: 33px;
+  border: 1px solid var(--white);
+  border-radius: 50%;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  color: var(--white);
+  z-index: 1;
+}
+
+.attribution a {
+  color: var(--soft-blue);
+}
+
+@media (max-width: 400px) {
+  .infos,
+  .author {
+    font-size: 0.9375rem;
+  }
+}
