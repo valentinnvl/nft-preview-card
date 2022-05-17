@@ -2,11 +2,6 @@
   --white: #FFF;
   --soft-blue: #8BACDA;
   --cyan: #00FFF7;
-  --bg-clr: #0D192B;
-  --card-clr: #14253D;
-  --card-shadow-clr: #0c1729;
-  --overlay-clr: #00FFF780;
-  --line-clr: #2F415B;
 }
 
 *,
@@ -24,7 +19,7 @@ body {
   align-items: center;
   gap: 8px;
   height: 100vh;
-  background-color: var(--bg-clr);
+  background-color: #0D192B;
   font-family: Outfit, sans-serif;
   font-weight: 400;
   color: var(--soft-blue);
@@ -47,9 +42,9 @@ a:hover {
   max-width: 350px;
   margin: 0 25px;
   padding: 24px 24px 32px;
-  background-color: var(--card-clr);
+  background-color: #14253D;
   border-radius: 15px;
-  box-shadow: 0 32px 0 16px var(--card-shadow-clr);
+  box-shadow: 0 32px 0 16px #0C1729;
 }
 
 .preview {
@@ -66,20 +61,15 @@ a:hover {
 .overlay {
   position: absolute;
   inset: 0;
-  background-color: var(--overlay-clr);
+  display: grid;
+  place-items: center;
+  background-color: #00FFF780;
   border-radius: 8px;
   opacity: 0;
 }
 
 .overlay:hover {
   opacity: 1;
-}
-
-.overlay-icon {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
 }
 
 .title {
@@ -119,7 +109,7 @@ a:hover {
 .line {
   height: 1px;
   width: 100%;
-  background-color: var(--line-clr);
+  background-color: #2F415B;
 }
 
 .author {
@@ -136,7 +126,7 @@ a:hover {
 }
 
 .attribution {
-  font-size: 11px;
+  font-size: .6875rem;
   text-align: center;
   color: var(--white);
   z-index: 1;
@@ -149,6 +139,6 @@ a:hover {
 @media (max-width: 400px) {
   .infos,
   .author {
-    font-size: 0.9375rem;
+    font-size: .9375rem;
   }
 }
